@@ -1,0 +1,14 @@
+- hosts: all
+  remote_user: root
+  tasks:
+                      - name: Instalando o Htop
+                        apt:  
+                                    name: htop
+                                    state: present
+                      - name: Criando o usuario analista
+                        user:
+                                    name: analista
+                                    state: present
+                      - name: ajustando time zone do servidor
+                        timezone: 
+                                    name: America/Sao_Paulo              
